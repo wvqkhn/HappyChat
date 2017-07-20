@@ -49,7 +49,7 @@ function userLogin() {
             window.WebSocket = window.MozWebSocket;
         }
         if (window.WebSocket) {
-            window.socket = new WebSocket("ws://chat.wolfbe.com:9688/websocket");
+            window.socket = new WebSocket("ws://localhost:9688/websocket");
             window.socket.onmessage = function (event) {
                 var data = eval("(" + event.data + ")");
                 console.log("onmessage data: " + JSON.stringify(data));
